@@ -1,7 +1,9 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './User/Register';
 import Signin from './User/Signin';
 import Password from './User/Password';
+import FighterForm from './User/FighterForm';
 import Home from './Home';
 import Navbar from './Navbar';
 
@@ -16,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/password" element={<Password />} />
+          <Route path="/fighterform" element={<FighterForm />} />
         </Routes>
       </main>
     </Router>
