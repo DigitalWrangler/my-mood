@@ -7,7 +7,7 @@ import Register from "./Register";
 import Password from "./Password";
 
 
-const SIGN_URL = "/sign";
+const AUTH_URL = "/auth";
 
 const Sign = () => {
   const [username, setUsername] = useState("");
@@ -23,7 +23,7 @@ const Sign = () => {
     }
 
     try {
-      const response = await axios.post(SIGN_URL, {
+      const response = await axios.post(AUTH_URL, {
         user: username,
         pwd: password,
       });
@@ -38,7 +38,7 @@ const Sign = () => {
 
         // Redirect to the success page or perform any other actions on success
         // Replace '/success' with your desired success page URL
-        window.location.href = "/success";
+        window.location.href = "/";
       } else {
         // Login failed, display error message
         setErrorMessage("Invalid Credentials");
